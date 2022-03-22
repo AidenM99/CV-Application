@@ -1,0 +1,19 @@
+body {
+  height: 100vh;
+}
+
+header {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+}
+
+form {
+  height: 100%;
+  padding: 3rem;
+}
+
+@media only screen and (max-width: 992px) {
+  header {
+    text-align: center;
+  }
+}
