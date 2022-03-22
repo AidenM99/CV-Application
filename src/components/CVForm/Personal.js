@@ -10,14 +10,6 @@ const Personal = () => {
         <Form.Control
           className="mb-3"
           type="text"
-          id="title"
-          placeholder="Title"
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Control
-          className="mb-3"
-          type="text"
           id="firstName"
           placeholder="First Name"
         />
@@ -28,6 +20,14 @@ const Personal = () => {
           type="text"
           id="lastName"
           placeholder="Last Name"
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Control
+          className="mb-3"
+          type="text"
+          id="title"
+          placeholder="Title"
         />
       </Form.Group>
       <Form.Group>
