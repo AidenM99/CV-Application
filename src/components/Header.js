@@ -1,0 +1,9 @@
+const Header = () => {
+  return (
+    <header className="bg-dark">
+      <h1 className="main-heading text-light"> CV Creator</h1>
+    </header>
+  );
+};
+
+export default Header;
