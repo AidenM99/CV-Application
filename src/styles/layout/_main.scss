@@ -1,3 +1,5 @@
+@import "../sass-utils/variables";
+
 .form-section {
   margin-bottom: 1.5rem;
 }
@@ -7,7 +9,17 @@
   position: sticky;
   top: 10px;
   .cv-preview-header {
-    padding: 3rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    color: $colour-white;
+    .name {
+      margin: 0;
+      font-size: 3rem;
+    }
+    .title {
+      margin: 0;
+      font-size: 1.5rem;
+    }
   }
   .cv-preview-main {
     padding: 3rem;
