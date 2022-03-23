@@ -2,8 +2,8 @@ import uniqid from "uniqid";
 
 const defaultCV = {
   personalInfo: {
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     title: "",
     about: "",
   },
