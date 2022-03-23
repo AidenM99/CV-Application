@@ -44,7 +44,20 @@ button {
 }
 
 .preview-cv .cv-preview-header {
-  padding: 3rem;
+  padding: 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+.preview-cv .cv-preview-header .name {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.preview-cv .cv-preview-header .title {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .preview-cv .cv-preview-main {
