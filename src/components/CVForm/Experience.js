@@ -35,16 +35,16 @@ const Experience = () => {
         <Form.Control
           className="mb-3"
           type="text"
-          id="experienceTo"
-          placeholder="To"
+          id="experienceFrom"
+          placeholder="From"
         />
       </Form.Group>
       <Form.Group>
         <Form.Control
           className="mb-3"
           type="text"
-          id="experienceFrom"
-          placeholder="From"
+          id="experienceTo"
+          placeholder="To"
         />
       </Form.Group>
       <div className="form-buttons">
