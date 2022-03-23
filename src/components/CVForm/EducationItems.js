@@ -1,7 +1,7 @@
 import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
-const EducationItems = () => {
+const EducationItems = ({ id, deleteEducation }) => {
   return (
     <>
       <Form.Group>
@@ -52,7 +52,9 @@ const EducationItems = () => {
           placeholder="To"
         />
       </Form.Group>
-      <Button variant="dark">Delete</Button>
+      <Button variant="dark" onClick={() => deleteEducation(id)}>
+        Delete
+      </Button>
     </>
   );
 };

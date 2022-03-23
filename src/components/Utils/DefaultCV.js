@@ -9,7 +9,7 @@ const defaultCV = {
   },
   education: [
     {
-      key: uniqid(),
+      id: uniqid(),
       university: "",
       city: "",
       degree: "",
@@ -20,7 +20,7 @@ const defaultCV = {
   ],
   experience: [
     {
-      key: uniqid(),
+      id: uniqid(),
       position: "",
       company: "",
       city: "",

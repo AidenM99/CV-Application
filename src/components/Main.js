@@ -7,13 +7,13 @@ import { useState } from "react";
 const Main = () => {
   const [cv, setCV] = useState(defaultCV);
 
-  const handleAddEducation = (education) => {
+  const handleAddEducation = () => {
     setCV((prevState) => ({
       ...prevState,
       education: [
         ...prevState.education,
         {
-          key: uniqid(),
+          id: uniqid(),
           universityName: "",
           city: "",
           degree: "",
@@ -25,10 +25,23 @@ const Main = () => {
     }));
   };
 
+  const handleDeleteEducation = (id) => {
+    setCV((prevState) => ({
+      ...prevState,
+      education: prevState.education.filter(
+        (educationItem) => educationItem.id !== id
+      ),
+    }));
+  };
+
   return (
     <main className="container">
       <div className="row">
-        <CVForm currentCV={cv} addEducation={handleAddEducation} />
+        <CVForm
+          currentCV={cv}
+          addEducation={handleAddEducation}
+          deleteEducation={handleDeleteEducation}
+        />
         <CVPreview />
       </div>
     </main>
