@@ -1,6 +1,6 @@
 import { Form } from "react-bootstrap";
 
-const Personal = () => {
+const Personal = ({ handlePersonalChange }) => {
   return (
     <section className="form-section personal-section">
       <div className="section-heading-container">
@@ -12,6 +12,7 @@ const Personal = () => {
           type="text"
           id="firstName"
           placeholder="First Name"
+          onChange={(e) => handlePersonalChange(e)}
         />
       </Form.Group>
       <Form.Group>
@@ -20,6 +21,7 @@ const Personal = () => {
           type="text"
           id="lastName"
           placeholder="Last Name"
+          onChange={(e) => handlePersonalChange(e)}
         />
       </Form.Group>
       <Form.Group>
@@ -28,6 +30,7 @@ const Personal = () => {
           type="text"
           id="title"
           placeholder="Title"
+          onChange={(e) => handlePersonalChange(e)}
         />
       </Form.Group>
       <Form.Group>

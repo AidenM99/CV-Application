@@ -60,6 +60,17 @@ const Main = () => {
     }));
   };
 
+  const handlePersonalChange = (e) => {
+    console.log(cv.personalInfo);
+    setCV((prevState) => ({
+      ...prevState,
+      personalInfo: {
+        ...prevState.personalInfo,
+        [e.target.id]: e.target.value,
+      },
+    }));
+  };
+
   return (
     <main className="container">
       <div className="row">
@@ -69,8 +80,9 @@ const Main = () => {
           deleteEducation={handleDeleteEducation}
           addExperience={handleAddExperience}
           deleteExperience={handleDeleteExperience}
+          handlePersonalChange={handlePersonalChange}
         />
-        <CVPreview />
+        <CVPreview currentCV={cv} />
       </div>
     </main>
   );

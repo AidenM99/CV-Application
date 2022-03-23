@@ -8,6 +8,7 @@ const CVForm = ({
   deleteEducation,
   addExperience,
   deleteExperience,
+  handlePersonalChange
 }) => {
   const { education } = currentCV;
   const { experience } = currentCV;
@@ -15,7 +16,7 @@ const CVForm = ({
   return (
     <div className="col-lg-6">
       <form className="user-cv shadow">
-        <Personal />
+        <Personal handlePersonalChange={handlePersonalChange}/>
         <Education
           education={education}
           addEducation={addEducation}
