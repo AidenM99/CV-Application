@@ -25,11 +25,37 @@ const Main = () => {
     }));
   };
 
+  const handleAddExperience = () => {
+    setCV((prevState) => ({
+      ...prevState,
+      experience: [
+        ...prevState.experience,
+        {
+          id: uniqid(),
+          position: "",
+          company: "",
+          city: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
+
   const handleDeleteEducation = (id) => {
     setCV((prevState) => ({
       ...prevState,
       education: prevState.education.filter(
         (educationItem) => educationItem.id !== id
+      ),
+    }));
+  };
+
+  const handleDeleteExperience = (id) => {
+    setCV((prevState) => ({
+      ...prevState,
+      experience: prevState.experience.filter(
+        (experienceItem) => experienceItem.id !== id
       ),
     }));
   };
@@ -41,6 +67,8 @@ const Main = () => {
           currentCV={cv}
           addEducation={handleAddEducation}
           deleteEducation={handleDeleteEducation}
+          addExperience={handleAddExperience}
+          deleteExperience={handleDeleteExperience}
         />
         <CVPreview />
       </div>

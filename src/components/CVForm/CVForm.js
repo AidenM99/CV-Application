@@ -2,8 +2,15 @@ import Personal from "./Personal";
 import Education from "./Education";
 import Experience from "./Experience";
 
-const CVForm = ({ currentCV, addEducation, deleteEducation }) => {
+const CVForm = ({
+  currentCV,
+  addEducation,
+  deleteEducation,
+  addExperience,
+  deleteExperience,
+}) => {
   const { education } = currentCV;
+  const { experience } = currentCV;
 
   return (
     <div className="col-lg-6">
@@ -14,7 +21,11 @@ const CVForm = ({ currentCV, addEducation, deleteEducation }) => {
           addEducation={addEducation}
           deleteEducation={deleteEducation}
         />
-        <Experience />
+        <Experience
+          experience={experience}
+          addExperience={addExperience}
+          deleteExperience={deleteExperience}
+        />
       </form>
     </div>
   );

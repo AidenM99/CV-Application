@@ -1,55 +1,25 @@
 import Button from "react-bootstrap/Button";
-import { Form } from "react-bootstrap";
+import ExperienceItems from "./ExperienceItems";
 
-const Experience = () => {
+const Experience = ({ experience, addExperience, deleteExperience }) => {
+  const experienceItems = experience.map((experienceItem) => (
+    <ExperienceItems
+      id={experienceItem.id}
+      key={experienceItem.id}
+      deleteExperience={deleteExperience}
+    />
+  ));
+
   return (
     <section className="form-section experience-section">
       <div className="section-heading-container">
         <h3 className="section-heading">Experience</h3>
       </div>
-      <Form.Group>
-        <Form.Control
-          className="mb-3"
-          type="text"
-          id="position"
-          placeholder="Position"
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Control
-          className="mb-3"
-          type="text"
-          id="company"
-          placeholder="Company"
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Control
-          className="mb-3"
-          type="text"
-          id="city"
-          placeholder="City"
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Control
-          className="mb-3"
-          type="text"
-          id="experienceFrom"
-          placeholder="From"
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Control
-          className="mb-3"
-          type="text"
-          id="experienceTo"
-          placeholder="To"
-        />
-      </Form.Group>
+      {experienceItems}
       <div className="form-buttons">
-        <Button variant="light">Add</Button>
-        <Button variant="dark">Delete</Button>
+        <Button variant="light" onClick={addExperience}>
+          Add
+        </Button>
       </div>
     </section>
   );
