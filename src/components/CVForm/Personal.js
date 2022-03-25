@@ -39,6 +39,7 @@ const Personal = ({ handlePersonalChange }) => {
           type="text"
           id="about"
           placeholder="About"
+          onChange={(e) => handlePersonalChange(e)}
         />
       </Form.Group>
     </section>
