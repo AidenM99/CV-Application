@@ -1,7 +1,7 @@
 import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
-const EducationItems = ({ id, deleteEducation }) => {
+const EducationItems = ({ id, deleteEducation, handleEducationChange }) => {
   return (
     <>
       <Form.Group>
@@ -10,6 +10,7 @@ const EducationItems = ({ id, deleteEducation }) => {
           type="text"
           id="university"
           placeholder="University"
+          onChange={(e) => handleEducationChange(e, id)}
         />
       </Form.Group>
       <Form.Group>
@@ -18,6 +19,7 @@ const EducationItems = ({ id, deleteEducation }) => {
           type="text"
           id="city"
           placeholder="City"
+          onChange={(e) => handleEducationChange(e, id)}
         />
       </Form.Group>
       <Form.Group>
@@ -26,6 +28,7 @@ const EducationItems = ({ id, deleteEducation }) => {
           type="text"
           id="degree"
           placeholder="Degree"
+          onChange={(e) => handleEducationChange(e, id)}
         />
       </Form.Group>
       <Form.Group>
@@ -34,6 +37,7 @@ const EducationItems = ({ id, deleteEducation }) => {
           type="text"
           id="subject"
           placeholder="Subject"
+          onChange={(e) => handleEducationChange(e, id)}
         />
       </Form.Group>
       <Form.Group>
@@ -42,6 +46,7 @@ const EducationItems = ({ id, deleteEducation }) => {
           type="text"
           id="educationFrom"
           placeholder="From"
+          onChange={(e) => handleEducationChange(e, id)}
         />
       </Form.Group>
       <Form.Group>
@@ -50,6 +55,7 @@ const EducationItems = ({ id, deleteEducation }) => {
           type="text"
           id="educationTo"
           placeholder="To"
+          onChange={(e) => handleEducationChange(e, id)}
         />
       </Form.Group>
       <Button variant="dark" onClick={() => deleteEducation(id)}>

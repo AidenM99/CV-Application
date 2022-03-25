@@ -61,13 +61,28 @@ const Main = () => {
   };
 
   const handlePersonalChange = (e) => {
-    console.log(cv.personalInfo);
     setCV((prevState) => ({
       ...prevState,
       personalInfo: {
         ...prevState.personalInfo,
         [e.target.id]: e.target.value,
       },
+    }));
+  };
+
+  const handleEducationChange = (e, itemID) => {
+    setCV((prevState) => ({
+      ...prevState,
+      education: prevState.education.map((educationItem) => {
+        if (educationItem.id === itemID) {
+          return {
+            ...educationItem,
+            [e.target.id]: e.target.value,
+          };
+        } else {
+          return educationItem;
+        }
+      }),
     }));
   };
 
@@ -81,6 +96,7 @@ const Main = () => {
           addExperience={handleAddExperience}
           deleteExperience={handleDeleteExperience}
           handlePersonalChange={handlePersonalChange}
+          handleEducationChange={handleEducationChange}
         />
         <CVPreview currentCV={cv} />
       </div>

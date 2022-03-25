@@ -1,12 +1,18 @@
 import Button from "react-bootstrap/Button";
 import EducationItems from "./EducationItems";
 
-const Education = ({ education, addEducation, deleteEducation }) => {
+const Education = ({
+  education,
+  addEducation,
+  deleteEducation,
+  handleEducationChange,
+}) => {
   const educationItems = education.map((educationItem) => (
     <EducationItems
       id={educationItem.id}
       key={educationItem.id}
       deleteEducation={deleteEducation}
+      handleEducationChange={handleEducationChange}
     />
   ));
 
