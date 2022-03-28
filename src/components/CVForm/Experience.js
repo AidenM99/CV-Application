@@ -1,12 +1,18 @@
 import Button from "react-bootstrap/Button";
 import ExperienceItems from "./ExperienceItems";
 
-const Experience = ({ experience, addExperience, deleteExperience }) => {
+const Experience = ({
+  experience,
+  addExperience,
+  deleteExperience,
+  handleExperienceChange,
+}) => {
   const experienceItems = experience.map((experienceItem) => (
     <ExperienceItems
       id={experienceItem.id}
       key={experienceItem.id}
       deleteExperience={deleteExperience}
+      handleExperienceChange={handleExperienceChange}
     />
   ));
 
