@@ -60,7 +60,29 @@ const Main = () => {
     }));
   };
 
+  const handleChangeFile = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      setCV((prevState) => ({
+        ...prevState,
+        personalInfo: {
+          ...prevState.personalInfo,
+          [e.target.id]: reader.result,
+        },
+      }));
+    };
+    reader.readAsDataURL(file);
+  };
+
   const handlePersonalChange = (e) => {
+    if (e.target.type === "file") {
+      handleChangeFile(e);
+      return;
+    }
+
     setCV((prevState) => ({
       ...prevState,
       personalInfo: {
@@ -86,9 +108,25 @@ const Main = () => {
     }));
   };
 
+  const handleExperienceChange = (e, itemID) => {
+    setCV((prevState) => ({
+      ...prevState,
+      experience: prevState.experience.map((experienceItem) => {
+        if (experienceItem.id === itemID) {
+          return {
+            ...experienceItem,
+            [e.target.id]: e.target.value,
+          };
+        } else {
+          return experienceItem;
+        }
+      }),
+    }));
+  };
+
   return (
-    <main className="container">
-      <div className="row">
+    <main className="p-5">
+      <div className="forms-container d-flex justify-content-center">
         <CVForm
           currentCV={cv}
           addEducation={handleAddEducation}
@@ -97,6 +135,7 @@ const Main = () => {
           deleteExperience={handleDeleteExperience}
           handlePersonalChange={handlePersonalChange}
           handleEducationChange={handleEducationChange}
+          handleExperienceChange={handleExperienceChange}
         />
         <CVPreview currentCV={cv} />
       </div>
