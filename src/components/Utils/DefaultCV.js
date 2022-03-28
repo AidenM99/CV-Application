@@ -1,11 +1,16 @@
 import uniqid from "uniqid";
+import emptyAvatar from "../../assets/Blank-Avatar.png";
 
 const defaultCV = {
   personalInfo: {
     firstName: "",
     lastName: "",
     title: "",
-    about: "",
+    summary: "",
+    phone: "",
+    email: "",
+    github: "",
+    photo: emptyAvatar,
   },
   education: [
     {
@@ -14,8 +19,8 @@ const defaultCV = {
       city: "",
       degree: "",
       subject: "",
-      from: "",
-      to: "",
+      educationFrom: "",
+      educationTo: "",
     },
   ],
   experience: [
@@ -24,8 +29,8 @@ const defaultCV = {
       position: "",
       company: "",
       city: "",
-      from: "",
-      to: "",
+      experienceFrom: "",
+      experienceTo: "",
     },
   ],
 };
