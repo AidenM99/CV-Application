@@ -1,19 +1,17 @@
+@import "../sass-utils/fonts";
+
 body {
   height: 100vh;
-  main {
-    padding: 3rem 0;
-  }
-
-  header {
-    padding: 1.5rem;
-  }
-
   form {
-    height: 100%;
+    width: 700px;
+    font-family: 'Roboto', sans-serif;
+  }
+  header {
+    font-family: 'Roboto', sans-serif;
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1500px) {
   header {
     text-align: center;
   }
