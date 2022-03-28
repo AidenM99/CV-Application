@@ -4,28 +4,66 @@
   margin-bottom: 1.5rem;
 }
 
+.forms-container {
+  gap: 2rem;
+}
+
 .preview-cv {
   height: 100vh;
   position: sticky;
   top: 10px;
   .cv-preview-header {
-    padding: 1.5rem;
     box-sizing: border-box;
     color: $colour-white;
-    .name {
-      margin: 0;
-      font-size: 3rem;
+    height: 11rem;
+    .avatar-container {
+      width: 10rem;
     }
-    .title {
-      margin: 0;
-      font-size: 1.5rem;
+    .personal-info-container {
+      padding: 0.8rem;
+      .title-name-container {
+        height: 100%;
+        .name {
+          margin: 0;
+          font-size: 1.8rem;
+          font-weight: 400;
+        }
+        .title {
+          margin: 0;
+          font-size: 1.2rem;
+          font-weight: 300;
+          font-style: italic;
+        }
+      }
+      .icons {
+        p {
+          margin: 0;
+          span {
+            font-size: 0.8rem;
+          }
+          .icon {
+            margin-right: 0.3rem;
+          }
+        }
+      }
     }
   }
   .cv-preview-main {
-    padding: 3rem;
+    padding: 1.5rem 3rem;
   }
 }
 
 .user-cv {
   padding: 3rem;
+}
+
+.underline {
+  border-bottom: 2px solid #d3d3d3;
+}
+
+@media only screen and (max-width: 1500px) {
+  .forms-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
