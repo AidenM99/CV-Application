@@ -1,8 +1,8 @@
 const Personal = ({ personalInfo }) => {
   return (
     <section>
-      <h2 className="border-bottom border-dark">About</h2>
-      <p>{personalInfo.about}</p>
+      <h3 className="underline">Summary</h3>
+      <p>{personalInfo.summary}</p>
     </section>
   );
 };
