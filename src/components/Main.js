@@ -1,11 +1,13 @@
 import CVForm from "./CVForm/CVForm";
 import CVPreview from "./CVPreview/CVPreview";
-import defaultCV from "./Utils/DefaultCV";
+import DefaultCV from "./Utils/DefaultCV";
+import ExampleCV from "./Utils/ExampleCV";
 import uniqid from "uniqid";
-import { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 const Main = () => {
-  const [cv, setCV] = useState(defaultCV);
+  const [cv, setCV] = useState(DefaultCV);
 
   const handleAddEducation = () => {
     setCV((prevState) => ({
@@ -124,11 +126,23 @@ const Main = () => {
     }));
   };
 
+  const loadCV = () => {
+    setCV((prevState) => ({
+      ...prevState,
+      ...ExampleCV,
+    }));
+  };
+
+  const componentRef = useRef();
+
+  const handlePrint = useReactToPrint({ content: () => componentRef.current });
+
   return (
     <main className="p-5">
-      <div className="forms-container d-flex justify-content-center">
+      <div className="forms-container d-flex justify-content-center gap-5">
         <CVForm
           currentCV={cv}
+          loadCV={loadCV}
           addEducation={handleAddEducation}
           deleteEducation={handleDeleteEducation}
           addExperience={handleAddExperience}
@@ -136,8 +150,9 @@ const Main = () => {
           handlePersonalChange={handlePersonalChange}
           handleEducationChange={handleEducationChange}
           handleExperienceChange={handleExperienceChange}
+          handlePrint={handlePrint}
         />
-        <CVPreview currentCV={cv} />
+        <CVPreview currentCV={cv} ref={componentRef} />
       </div>
     </main>
   );
