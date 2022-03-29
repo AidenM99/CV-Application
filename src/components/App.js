@@ -1,6 +1,6 @@
 import Main from "./Main";
 import Header from "./Header";
-import "../styles/App.scss";
+import "../styles/_App.scss";
 
 const App = () => {
   return (
