@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .avatar {
   -o-object-fit: cover;
      object-fit: cover;
@@ -10,6 +11,7 @@
 
 body {
   height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -18,10 +20,10 @@ header {
 
 form {
   font-family: "Roboto", sans-serif;
-  width: 700px;
+  width: 210mm;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1750px) {
   header {
     text-align: center;
   }
@@ -32,11 +34,13 @@ form {
 }
 
 .preview-cv {
-  overflow-wrap: anywhere;
-  top: 10px;
+  font-family: "Roboto", sans-serif;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  overflow-wrap: anywhere;
+  top: 10px;
+  width: 210mm;
 }
 
 .preview-cv h3 {
@@ -114,7 +118,7 @@ form {
   font-size: 0.8rem;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1750px) {
   .forms-container {
     -webkit-box-align: center;
         -ms-flex-align: center;
