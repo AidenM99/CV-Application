@@ -15,7 +15,7 @@
     "sass": "^1.49.9",
     "uniqid": "^5.4.0",
     "web-vitals": "^2.1.4",
-    "homepage": "http://AidenM99.github.io/CV-Creator"
+    "homepage": "https://AidenM99.github.io/CV-Creator"
   },
   "scripts": {
     "start": "react-scripts start",
