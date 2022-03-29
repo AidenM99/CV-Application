@@ -1,69 +1,71 @@
 @import "../sass-utils/variables";
 
-.form-section {
-  margin-bottom: 1.5rem;
-}
-
-.forms-container {
-  gap: 2rem;
-}
-
 .preview-cv {
-  height: 100vh;
-  position: sticky;
+  overflow-wrap: anywhere;
   top: 10px;
-  .cv-preview-header {
-    box-sizing: border-box;
-    color: $colour-white;
-    height: 11rem;
-    .avatar-container {
-      width: 10rem;
+  height: fit-content;
+  h3 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+.cv-preview-main {
+  .education-items-container,
+  .experience-items-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    p {
+      margin: 0;
     }
-    .personal-info-container {
-      padding: 0.8rem;
-      .title-name-container {
-        height: 100%;
-        .name {
-          margin: 0;
-          font-size: 1.8rem;
-          font-weight: 400;
-        }
-        .title {
-          margin: 0;
-          font-size: 1.2rem;
-          font-weight: 300;
-          font-style: italic;
-        }
+    .city,
+    .date {
+      justify-self: end;
+    }
+    .university,
+    .position {
+      font-weight: 600;
+    }
+    .work-summary,
+    .degree {
+      display: list-item;
+      grid-column: 1/3;
+      list-style-position: inside;
+      list-style-type: disc;
+    }
+  }
+}
+
+.cv-preview-header {
+  box-sizing: border-box;
+  color: $colour-white;
+  height: 11rem;
+  .avatar-container {
+    width: 10rem;
+  }
+  .personal-info-container {
+    .title-name-container {
+      height: 100%;
+      .title {
+        font-size: 1.2rem;
       }
-      .icons {
-        p {
-          margin: 0;
-          span {
-            font-size: 0.8rem;
-          }
-          .icon {
-            margin-right: 0.3rem;
-          }
+    }
+    .icons {
+      p {
+        margin: 0;
+        span {
+          font-size: 0.8rem;
         }
       }
     }
   }
-  .cv-preview-main {
-    padding: 1.5rem 3rem;
-  }
-}
-
-.user-cv {
-  padding: 3rem;
-}
-
-.underline {
-  border-bottom: 2px solid #d3d3d3;
 }
 
 @media only screen and (max-width: 1500px) {
   .forms-container {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
 }

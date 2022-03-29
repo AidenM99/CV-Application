@@ -2,13 +2,15 @@
 
 body {
   height: 100vh;
-  form {
-    width: 700px;
-    font-family: 'Roboto', sans-serif;
-  }
-  header {
-    font-family: 'Roboto', sans-serif;
-  }
+}
+
+header {
+  font-family: "Roboto", sans-serif;
+}
+
+form {
+  font-family: "Roboto", sans-serif;
+  width: 700px;
 }
 
 @media only screen and (max-width: 1500px) {
