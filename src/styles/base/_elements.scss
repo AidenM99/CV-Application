@@ -2,6 +2,7 @@
 
 body {
   height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -10,10 +11,10 @@ header {
 
 form {
   font-family: "Roboto", sans-serif;
-  width: 700px;
+  width: 210mm;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1750px) {
   header {
     text-align: center;
   }
