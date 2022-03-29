@@ -1,6 +1,6 @@
 import { Form } from "react-bootstrap";
 
-const PersonalItems = ({ handlePersonalChange }) => {
+const PersonalItems = ({ personalInfo, handlePersonalChange }) => {
   return (
     <>
       <Form.Group>
@@ -10,6 +10,7 @@ const PersonalItems = ({ handlePersonalChange }) => {
           id="firstName"
           placeholder="First Name"
           onChange={(e) => handlePersonalChange(e)}
+          value={personalInfo.firstName}
         />
       </Form.Group>
       <Form.Group>
@@ -19,6 +20,7 @@ const PersonalItems = ({ handlePersonalChange }) => {
           id="lastName"
           placeholder="Last Name"
           onChange={(e) => handlePersonalChange(e)}
+          value={personalInfo.lastName}
         />
       </Form.Group>
       <Form.Group>
@@ -28,6 +30,7 @@ const PersonalItems = ({ handlePersonalChange }) => {
           id="title"
           placeholder="Title"
           onChange={(e) => handlePersonalChange(e)}
+          value={personalInfo.title}
         />
         <Form.Group>
           <Form.Control
@@ -45,6 +48,7 @@ const PersonalItems = ({ handlePersonalChange }) => {
           id="phone"
           placeholder="Phone"
           onChange={(e) => handlePersonalChange(e)}
+          value={personalInfo.phone}
         />
       </Form.Group>
       <Form.Group>
@@ -54,6 +58,7 @@ const PersonalItems = ({ handlePersonalChange }) => {
           id="email"
           placeholder="Email"
           onChange={(e) => handlePersonalChange(e)}
+          value={personalInfo.email}
         />
       </Form.Group>
       <Form.Group>
@@ -63,6 +68,7 @@ const PersonalItems = ({ handlePersonalChange }) => {
           id="github"
           placeholder="Github"
           onChange={(e) => handlePersonalChange(e)}
+          value={personalInfo.github}
         />
       </Form.Group>
       <Form.Group>
@@ -73,6 +79,7 @@ const PersonalItems = ({ handlePersonalChange }) => {
           id="summary"
           placeholder="Summary"
           onChange={(e) => handlePersonalChange(e)}
+          value={personalInfo.summary}
         />
       </Form.Group>
     </>

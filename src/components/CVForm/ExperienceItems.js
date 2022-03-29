@@ -1,7 +1,12 @@
 import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
-const ExperienceItems = ({ id, deleteExperience, handleExperienceChange }) => {
+const ExperienceItems = ({
+  id,
+  experienceItem,
+  deleteExperience,
+  handleExperienceChange,
+}) => {
   return (
     <>
       <Form.Group>
@@ -11,6 +16,7 @@ const ExperienceItems = ({ id, deleteExperience, handleExperienceChange }) => {
           id="position"
           placeholder="Position"
           onChange={(e) => handleExperienceChange(e, id)}
+          value={experienceItem.position}
         />
       </Form.Group>
       <Form.Group>
@@ -20,6 +26,7 @@ const ExperienceItems = ({ id, deleteExperience, handleExperienceChange }) => {
           id="company"
           placeholder="Company"
           onChange={(e) => handleExperienceChange(e, id)}
+          value={experienceItem.company}
         />
       </Form.Group>
       <Form.Group>
@@ -29,6 +36,7 @@ const ExperienceItems = ({ id, deleteExperience, handleExperienceChange }) => {
           id="city"
           placeholder="City"
           onChange={(e) => handleExperienceChange(e, id)}
+          value={experienceItem.city}
         />
       </Form.Group>
       <Form.Group>
@@ -38,6 +46,7 @@ const ExperienceItems = ({ id, deleteExperience, handleExperienceChange }) => {
           id="experienceFrom"
           placeholder="From"
           onChange={(e) => handleExperienceChange(e, id)}
+          value={experienceItem.experienceFrom}
         />
       </Form.Group>
       <Form.Group>
@@ -47,9 +56,21 @@ const ExperienceItems = ({ id, deleteExperience, handleExperienceChange }) => {
           id="experienceTo"
           placeholder="To"
           onChange={(e) => handleExperienceChange(e, id)}
+          value={experienceItem.experienceTo}
         />
       </Form.Group>
-      <Button variant="dark" onClick={() => deleteExperience(id)}>
+      <Form.Group>
+        <Form.Control
+          className="mb-3"
+          type="text"
+          as="textarea"
+          id="workSummary"
+          placeholder="Work Summary"
+          onChange={(e) => handleExperienceChange(e, id)}
+          value={experienceItem.workSummary}
+        />
+      </Form.Group>
+      <Button variant="dark mb-3 w-100" onClick={() => deleteExperience(id)}>
         Delete
       </Button>
     </>
