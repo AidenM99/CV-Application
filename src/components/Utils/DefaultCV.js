@@ -1,5 +1,5 @@
 import uniqid from "uniqid";
-import emptyAvatar from "../../assets/Blank-Avatar.png";
+import emptyAvatar from "../../assets/blankAvatar.png";
 
 const defaultCV = {
   personalInfo: {
@@ -29,6 +29,7 @@ const defaultCV = {
       position: "",
       company: "",
       city: "",
+      workSummary: "",
       experienceFrom: "",
       experienceTo: "",
     },
