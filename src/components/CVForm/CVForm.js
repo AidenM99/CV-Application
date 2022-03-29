@@ -27,17 +27,17 @@ const CVForm = ({
         personalInfo={personalInfo}
         handlePersonalChange={handlePersonalChange}
       />
-      <Education
-        education={education}
-        addEducation={addEducation}
-        deleteEducation={deleteEducation}
-        handleEducationChange={handleEducationChange}
-      />
       <Experience
         experience={experience}
         addExperience={addExperience}
         deleteExperience={deleteExperience}
         handleExperienceChange={handleExperienceChange}
+      />
+      <Education
+        education={education}
+        addEducation={addEducation}
+        deleteEducation={deleteEducation}
+        handleEducationChange={handleEducationChange}
       />
       <Button variant="primary w-100 mb-3" onClick={loadCV}>
         Load Example CV

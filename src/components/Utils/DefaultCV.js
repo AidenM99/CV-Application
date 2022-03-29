@@ -12,17 +12,6 @@ const defaultCV = {
     github: "",
     photo: emptyAvatar,
   },
-  education: [
-    {
-      id: uniqid(),
-      university: "",
-      city: "",
-      degree: "",
-      subject: "",
-      educationFrom: "",
-      educationTo: "",
-    },
-  ],
   experience: [
     {
       id: uniqid(),
@@ -32,6 +21,17 @@ const defaultCV = {
       workSummary: "",
       experienceFrom: "",
       experienceTo: "",
+    },
+  ],
+  education: [
+    {
+      id: uniqid(),
+      university: "",
+      city: "",
+      degree: "",
+      subject: "",
+      educationFrom: "",
+      educationTo: "",
     },
   ],
 };
