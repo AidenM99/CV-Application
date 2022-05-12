@@ -20,7 +20,7 @@ const Education = ({
   return (
     <section className="form-section education-section mb-3">
       <div className="section-heading-container">
-        <h3 className="section-heading">Education</h3>
+        <h2 className="section-heading">Education</h2>
       </div>
       {educationItems}
       <Button variant="light w-100" onClick={addEducation}>

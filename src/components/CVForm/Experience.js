@@ -20,7 +20,7 @@ const Experience = ({
   return (
     <section className="form-section experience-section mb-3">
       <div className="section-heading-container">
-        <h3 className="section-heading">Experience</h3>
+        <h2 className="section-heading">Experience</h2>
       </div>
       {experienceItems}
       <div className="form-buttons">
