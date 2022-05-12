@@ -23,7 +23,7 @@ const EducationItems = ({
         <Form.Control
           className="mb-3"
           type="text"
-          id="city"
+          id="educationCity"
           placeholder="City"
           onChange={(e) => handleEducationChange(e, id)}
           value={educationItem.city}

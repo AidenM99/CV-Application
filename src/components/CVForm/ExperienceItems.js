@@ -33,7 +33,7 @@ const ExperienceItems = ({
         <Form.Control
           className="mb-3"
           type="text"
-          id="city"
+          id="experienceCity"
           placeholder="City"
           onChange={(e) => handleExperienceChange(e, id)}
           value={experienceItem.city}
