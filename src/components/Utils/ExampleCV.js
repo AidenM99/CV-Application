@@ -18,7 +18,7 @@ const exampleCV = {
       id: uniqid(),
       position: "Senior Web Developer",
       company: "Google LLC",
-      city: "London, UK",
+      experienceCity: "London, UK",
       workSummary:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacus justo, sodales quis eleifend at, gravida sit amet tellus. Donec ac efficitur nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque massa urna, consectetur id auctor in, mollis eget purus. Ut in eros purus. Pellentesque vestibulum, tortor in pretium pellentesque.",
       experienceFrom: "Jun. 2021",
@@ -28,7 +28,7 @@ const exampleCV = {
       id: uniqid(),
       position: "Junior Web Developer",
       company: "Meta Platforms, Inc.",
-      city: "London, UK",
+      experienceCity: "London, UK",
       workSummary:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacus justo, sodales quis eleifend at, gravida sit amet tellus. Donec ac efficitur nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque massa urna, consectetur id auctor in, mollis eget purus. Ut in eros purus. Pellentesque vestibulum, tortor in pretium pellentesque.",
       experienceFrom: "Sept. 2018",
@@ -38,7 +38,7 @@ const exampleCV = {
       id: uniqid(),
       position: "Position",
       company: "Company",
-      city: "City",
+      experienceCity: "City",
       workSummary: "Work Summary",
       experienceFrom: "From",
       experienceTo: "To",
@@ -48,7 +48,7 @@ const exampleCV = {
     {
       id: uniqid(),
       university: "University of Oxford",
-      city: "Oxford, UK",
+      educationCity: "Oxford, UK",
       degree: "First Class Honours Degree (1st)",
       subject: "Computer Science",
       educationFrom: "Sept. 2015",
@@ -57,7 +57,7 @@ const exampleCV = {
     {
       id: uniqid(),
       university: "University",
-      city: "City",
+      educationCity: "City",
       degree: "Degree Classification",
       subject: "Subject",
       educationFrom: "From",

@@ -13,7 +13,7 @@ const Experience = ({ experience }) => {
             {experienceItem.position}
           </p>
           <p className="city fst-italic" key={uniqid()}>
-            {experienceItem.city}
+            {experienceItem.experienceCity}
           </p>
           <p className="company  fst-italic" key={uniqid()}>
             {experienceItem.company}

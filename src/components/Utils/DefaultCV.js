@@ -17,7 +17,7 @@ const defaultCV = {
       id: uniqid(),
       position: "",
       company: "",
-      city: "",
+      experienceCity: "",
       workSummary: "",
       experienceFrom: "",
       experienceTo: "",
@@ -27,7 +27,7 @@ const defaultCV = {
     {
       id: uniqid(),
       university: "",
-      city: "",
+      educationCity: "",
       degree: "",
       subject: "",
       educationFrom: "",

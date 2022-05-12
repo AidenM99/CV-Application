@@ -13,7 +13,7 @@ const Education = ({ education }) => {
             {educationItem.university}
           </p>
           <p className="city fst-italic" key={uniqid()}>
-            {educationItem.city}
+            {educationItem.educationCity}
           </p>
           <p className="subject  fst-italic" key={uniqid()}>
             {educationItem.subject}
