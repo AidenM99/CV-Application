@@ -33,6 +33,9 @@ const PersonalItems = ({ personalInfo, handlePersonalChange }) => {
           value={personalInfo.title}
         />
         <Form.Group>
+          <Form.Label htmlFor="photo" visuallyHidden>
+            Upload Photo
+          </Form.Label>
           <Form.Control
             className="mb-3"
             type="file"
