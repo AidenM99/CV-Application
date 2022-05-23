@@ -22,7 +22,7 @@ const CVForm = ({
   const { personalInfo } = currentCV;
 
   return (
-    <Form className="shadow p-5 min-vh-100">
+    <Form className="shadow p-5 h-100" style={{ width: "210mm" }}>
       <Personal
         personalInfo={personalInfo}
         handlePersonalChange={handlePersonalChange}

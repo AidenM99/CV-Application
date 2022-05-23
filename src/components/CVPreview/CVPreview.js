@@ -10,7 +10,11 @@ const CVPreview = React.forwardRef((props, ref) => {
   const { experience } = props.currentCV;
 
   return (
-    <div ref={ref} className="preview-cv shadow min-vh-100 position-sticky">
+    <div
+      ref={ref}
+      className="preview-cv shadow position-sticky"
+      style={{ height: "297mm", width: "210mm" }}
+    >
       <CVPreviewHeader personalInfo={personalInfo} />
       <div className="cv-preview-main pe-5 ps-5 pt-4 pb-4">
         <Personal personalInfo={personalInfo} />
